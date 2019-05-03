@@ -1,11 +1,12 @@
 <template>
 	<div class="home-container">
-		<div class="">
+		<div class="c">
+			<time-period></time-period>
 			<time-period></time-period>
 		</div>
 		
 		<div>
-			<time-period></time-period>
+			
 		</div>
 		
 	</div>

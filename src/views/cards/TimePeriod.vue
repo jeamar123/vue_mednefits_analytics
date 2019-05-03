@@ -1,10 +1,24 @@
 <template>
-	<div class="timePeriod-container">
-		<h1>time Period</h1>
-	</div>
+  <div class="timePeriod-container">
+    <h1>time Period
+			chart
+		</h1>
+  </div>
 </template>
 
 <script>
-	import timePeriod from '@/components/cards/timePeriod'
-	export default timePeriod
+export default {
+  data() {
+    return {
+      user_data: {}
+    };
+  },
+  created() {},
+  methods: {}
+};
 </script>
+
+<style>
+
+</style>
+
