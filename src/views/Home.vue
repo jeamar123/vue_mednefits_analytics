@@ -4,16 +4,22 @@
       <!-- left box -->
       <div>
         <div class="data-mednefits-box">
-          <BarGraph></BarGraph>
+          <!-- credit time Period -->
+          <CreditTimePeriod></CreditTimePeriod>
         </div>
+        <!-- Growth time period -->
         <div class="data-mednefits-box">
-          <BarGraph></BarGraph>
+          <GrowthTimePeriod></GrowthTimePeriod>
         </div>
       </div>
       <!-- right box -->
       <div>
+        <!-- Active cards -->
         <div class="data-mednefits-box">
-          <BarGraph></BarGraph>
+        </div>
+        <!-- life Pro plan  -->
+        <div class="data-mednefits-box">
+          <LifeProPlan></LifeProPlan>
         </div>
       </div>
     </div>

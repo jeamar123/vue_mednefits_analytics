@@ -1,18 +1,35 @@
 <template>
   <div class="growthTimePeriod-container">
-    <h1>Growth Time Period chart</h1>
+    <h4>Plan growth over time period</h4>
+    <canvas id="crowthTimePeriod-chart"></canvas>
   </div>
 </template>
 
 <script>
+import Chart from "chart.js";
+import planetChartData from "../../chart-data/chart-data.js";
+
 export default {
   data() {
     return {
+      planetChartData: planetChartData, // chart data
       user_data: {}
     };
   },
   created() {},
-  methods: {}
+  methods: {
+    createChart(chartid, chartData) {
+      const ctx = document.getElementById(chartid);
+      const myChart = new Chart(ctx, {
+        type: chartData.type,
+        data: chartData.data,
+        options: chartData.options
+      });
+    }
+  },
+  mounted() {
+    this.createChart("crowthTimePeriod-chart", this.planetChartData);
+  }
 };
 </script>
 

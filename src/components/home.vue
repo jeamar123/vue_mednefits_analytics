@@ -1,11 +1,15 @@
 <script>
 import CreditTimePeriod from '../views/cards/CreditTimePeriod';
+import GrowthTimePeriod from '../views/cards/GrowthTimePeriod';
+import LifeProPlan from '../views/cards/Life-pro-plan';
 import BarGraph from '../views/cards/Bar-graph';
 
 	var home = {
 		components: {
 			BarGraph,
 			CreditTimePeriod,
+			GrowthTimePeriod,
+			LifeProPlan
 		},
 		data() {
 			return {
