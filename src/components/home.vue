@@ -21,3 +21,8 @@ import TimePeriod from '../views/cards/TimePeriod';
 	export default home
 </script>
 
+
+<style lang="scss" scoped>
+	@import './src/assets/css/home.scss'
+</style>
+

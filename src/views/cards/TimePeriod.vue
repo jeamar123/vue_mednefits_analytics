@@ -1,8 +1,8 @@
 <template>
-  <div class="timePeriod-container">
-    <h1>time Period
-			chart
-		</h1>
+  <div>
+    <div class="timePeriod-container">
+      <h3>Time Period</h3>
+    </div>
   </div>
 </template>
 
