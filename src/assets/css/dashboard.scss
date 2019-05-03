@@ -1,10 +1,11 @@
 .data-analytics-container {
 	background-color: #f5f8fa;
-	height: 100%;
+	height: 100vh;
 	display: flex;
 }
 .data-header-container {
 	font-size: 18px;
+	background-color: #0392cf;
 }
 .menu-container {
 	background-color: #15628d;
@@ -17,9 +18,7 @@
 }
 .nav-bar-container {
 	display: block;
-	background-color: #0392cf;
 	color: #8dbbff;
-	height: 100vh;
 	text-align: center;
 
 	i {
@@ -33,7 +32,6 @@
 }
 .data-body-container {
 	width: 100%;
-	height: 100vh;
 }
 .data-dash-header {
 	background-color: #fff;
