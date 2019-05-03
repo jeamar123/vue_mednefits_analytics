@@ -2,6 +2,7 @@ body {
 	font-family: 'Helvetica Thin';
 	margin: 0;
 	font-size: 16px;
+	overflow: hidden;
 }
 
 a {
@@ -15,6 +16,23 @@ ul {
 
 ul li {
 	list-style-type: none;
+}
+
+i {
+	cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background-color: #31b0d5;
 }
 
 .data-mednefits-box {
