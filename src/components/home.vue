@@ -23,3 +23,8 @@ import BarGraph from '../views/cards/Bar-graph';
 	export default home
 </script>
 
+
+<style lang="scss" scoped>
+	@import './src/assets/css/home.scss'
+</style>
+

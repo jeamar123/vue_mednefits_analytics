@@ -17,3 +17,12 @@ ul {
 ul li {
 	list-style-type: none;
 }
+
+.data-mednefits-box {
+	display: block;
+	padding: 20px;
+	margin: 20px;
+	background-color: #fff;
+	border: solid 1px #eae7e7;
+  box-shadow: 2px 2px 2px 0px rgba(185,185,185,.5);
+}
