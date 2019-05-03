@@ -1,10 +1,10 @@
 <template>
 	<div class="timePeriod-container">
-		TimePeriod
+		<h1>time Period</h1>
 	</div>
 </template>
 
 <script>
-	import timePeriod from '@/components/timePeriod'
+	import timePeriod from '@/components/cards/timePeriod'
 	export default timePeriod
 </script>
