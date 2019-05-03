@@ -1,5 +1,8 @@
 <script>
+
   var dashboard = {
+    components: {
+		},
     data() {
       return {
         sample : {}
@@ -16,3 +19,7 @@
 
   export default dashboard
 </script>
+
+<style lang="scss" scoped>
+	@import './src/assets/css/dashboard.scss'
+</style>
