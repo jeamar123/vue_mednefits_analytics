@@ -1,9 +1,11 @@
 <script>
-import TimePeriod from '../views/cards/TimePeriod';
+import CreditTimePeriod from '../views/cards/CreditTimePeriod';
+import BarGraph from '../views/cards/Bar-graph';
 
 	var home = {
 		components: {
-			TimePeriod
+			BarGraph,
+			CreditTimePeriod,
 		},
 		data() {
 			return {

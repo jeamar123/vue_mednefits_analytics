@@ -1,8 +1,7 @@
 <template>
 	<div class="home-container">
 		<div class="c">
-			<time-period></time-period>
-			<time-period></time-period>
+			<BarGraph></BarGraph>
 		</div>
 		
 		<div>

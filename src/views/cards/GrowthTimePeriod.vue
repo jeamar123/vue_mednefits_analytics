@@ -1,8 +1,6 @@
 <template>
-  <div class="timePeriod-container">
-    <h1>time Period
-			chart
-		</h1>
+  <div class="growthTimePeriod-container">
+    <h1>Growth Time Period chart</h1>
   </div>
 </template>
 
