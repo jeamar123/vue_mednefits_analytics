@@ -9,11 +9,14 @@
         <div class="nav-bar-container">
           <ul>
             <li>
+              <i class="fa fa-home active"></i>
+            </li>
+            <li>
               <i class="fa fa-user"></i>
             </li>
             <li>
               <a>
-                <i class="fa fa-medkit active"></i>
+                <i class="fa fa-medkit"></i>
               </a>
             </li>
             <li>
