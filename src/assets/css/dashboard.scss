@@ -1,3 +1,5 @@
+
+
 .data-analytics-container {
 	background-color: #f5f8fa;
 	height: 100vh;
@@ -17,15 +19,20 @@
 }
 .nav-bar-container {
 	display: block;
-	color: #8dbbff;
+	// color: #8dbbff;
 	text-align: center;
+	
+	a {
+		color: #8dbbff;
+	}
+
+	.active {
+		color: #fff;
+	}
+
 
 	i {
 		padding: 30px 20px;
-
-		&.active {
-			color: #fff;
-		}
 	}
 }
 .data-body-container {

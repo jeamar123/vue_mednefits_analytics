@@ -6,6 +6,10 @@ import Router from 'vue-router'
 
 import Dashboard from './views/Dashboard.vue'
 import Home from './views/Home.vue'
+import User from './views/User.vue'
+import Clinic from './views/Clinic.vue'
+import Company from './views/Company.vue'
+import Finance from './views/Finance.vue'
 
 Vue.use(Router)
 
@@ -23,6 +27,10 @@ export default new Router({
       // meta: { auth: true },
       children: [
         { name: 'Home', path: '/app/dashboard', component: Home },
+        { name: 'User', path: '/app/user', component: User },
+        { name: 'Clinic', path: '/app/clinic', component: Clinic },
+        { name: 'Company', path: '/app/company', component: Company },
+        { name: 'Finance', path: '/app/finance', component: Finance },
       ]
     },
     
