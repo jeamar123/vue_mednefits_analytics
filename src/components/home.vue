@@ -1,8 +1,8 @@
 <script>
-import CreditTimePeriod from '../views/cards/CreditTimePeriod';
-import GrowthTimePeriod from '../views/cards/GrowthTimePeriod';
-import LifeProPlan from '../views/cards/Life-pro-plan';
-import BarGraph from '../views/cards/Bar-graph';
+import CreditTimePeriod from '../views/cards/summary/CreditTimePeriod';
+import GrowthTimePeriod from '../views/cards/summary/GrowthTimePeriod';
+import LifeProPlan from '../views/cards/summary/Life-pro-plan';
+import BarGraph from '../views/cards/summary/Bar-graph';
 
 	var home = {
 		components: {

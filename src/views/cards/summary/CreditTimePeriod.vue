@@ -7,7 +7,7 @@
 
 <script>
 import Chart from "chart.js";
-import planetChartData from "../../chart-data/chart-data.js";
+import planetChartData from "../../../chart-data/chart-data.js";
 
 export default {
   data() {
