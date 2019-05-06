@@ -1,18 +1,18 @@
 <template>
-  <div class="growthTimePeriod-container">
-    <h4>Plan growth over time period</h4>
-    <canvas id="crowthTimePeriod-chart"></canvas>
+  <div class="location-map-container">
+    <h4>User that have dependant on platform</h4>
+    <canvas id="bar-chart"></canvas>
   </div>
 </template>
 
 <script>
 import Chart from "chart.js";
-import planetChartData from "../../chart-data/chart-data.js";
+import planetChartData from "../../../chart-data/chart-data.js";
 
 export default {
   data() {
     return {
-      planetChartData: planetChartData, // chart data
+      planetChartData: planetChartData, // bar chart data
       user_data: {}
     };
   },
@@ -28,7 +28,7 @@ export default {
     }
   },
   mounted() {
-    this.createChart("crowthTimePeriod-chart", this.planetChartData);
+    this.createChart("bar-chart", this.planetChartData);
   }
 };
 </script>

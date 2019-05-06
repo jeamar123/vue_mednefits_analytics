@@ -54,6 +54,12 @@
 	        		</div>
         		</div>
         	</div>
+         <!--  <ActiveUser></ActiveUser>
+          <ActiveClinic></ActiveClinic>
+          <ActiveLifePlan></ActiveLifePlan>
+          <ActiveProPlan></ActiveProPlan>
+          <CreditUsed></CreditUsed>
+          <CreditAllocated></CreditAllocated> -->
         </div>
         <!-- life Pro plan  -->
         <div class="data-mednefits-box">

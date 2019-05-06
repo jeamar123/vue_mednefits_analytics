@@ -1,13 +1,13 @@
 <template>
-  <div class="life-pro-plan-container">
-    <h4>Life plan growth month and yearly vs one year back date</h4>
-    <canvas id="life-pro-plan-chart"></canvas>
+  <div class="growthTimePeriod-container">
+    <h4>Plan growth over time period</h4>
+    <canvas id="crowthTimePeriod-chart"></canvas>
   </div>
 </template>
 
 <script>
 import Chart from "chart.js";
-import planetChartData from "../../chart-data/chart-data.js";
+import planetChartData from "../../../chart-data/chart-data.js";
 
 export default {
   data() {
@@ -28,11 +28,12 @@ export default {
     }
   },
   mounted() {
-    this.createChart("life-pro-plan-chart", this.planetChartData);
+    this.createChart("crowthTimePeriod-chart", this.planetChartData);
   }
 };
 </script>
 
 <style>
+
 </style>
 
