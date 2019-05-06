@@ -9,25 +9,29 @@
         <div class="nav-bar-container">
           <ul>
             <li>
-              <i class="fa fa-home active"></i>
+              <router-link to="/app/dashboard">
+                <i class="fa fa-home"></i>
+              </router-link>
             </li>
             <li>
-              <i class="fa fa-user"></i>
+              <router-link to="/app/user">
+                <i class="fa fa-user"></i>
+              </router-link>
             </li>
             <li>
-              <a>
+              <router-link to="/app/clinic">
                 <i class="fa fa-medkit"></i>
-              </a>
+              </router-link>
             </li>
             <li>
-              <a>
+              <router-link to="/app/company">
                 <i class="fa fa-building-o"></i>
-              </a>
+              </router-link>
             </li>
             <li>
-              <a>
+              <router-link to="/app/finance">
                 <i class="fa fa-credit-card"></i>
-              </a>
+              </router-link>
             </li>
           </ul>
         </div>
