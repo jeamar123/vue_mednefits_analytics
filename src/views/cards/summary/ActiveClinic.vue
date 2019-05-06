@@ -1,6 +1,8 @@
 <template>
-  <div class="activeClinic-container">
-    <h1>Active Clinic</h1>
+  <div class="status-clinic-container">
+    <h4 class="status-text">Active</h4>
+    <h3>24</h3>
+    <h5>Clinics</h5>
   </div>
 </template>
 
@@ -16,7 +18,7 @@ export default {
 };
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+  @import './src/assets/css/summary-active-cards.scss'
 </style>
 

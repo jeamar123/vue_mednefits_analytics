@@ -1,6 +1,8 @@
 <template>
-  <div class="activeUser-container">
-    <h1>Active User</h1>
+  <div class="status-user-container">
+    <h4 class="status-text">Active</h4>
+    <h3>03</h3>
+    <h5>Users</h5>  
   </div>
 </template>
 
@@ -14,9 +16,9 @@ export default {
   created() {},
   methods: {}
 };
-</script>
+</script>  
 
-<style>
-
+<style lang="scss" scoped>
+  @import './src/assets/css/summary-active-cards.scss'
 </style>
 

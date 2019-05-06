@@ -41,6 +41,6 @@ import BarGraph from '../views/cards/summary/Bar-graph';
 
 
 <style lang="scss" scoped>
-	@import './src/assets/css/home.scss'
+	@import './src/assets/css/home.scss';
 </style>
 

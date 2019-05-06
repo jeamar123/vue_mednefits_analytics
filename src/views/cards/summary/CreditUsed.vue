@@ -1,6 +1,8 @@
 <template>
-  <div class="creditUsed-container">
-    <h1>Credit Used</h1>
+  <div class="credit-use-container">
+    <h4 class="credit-text">Credit</h4>
+    <h3>S$ <span>5400.00</span></h3>
+    <h5>Used</h5>
   </div>
 </template>
 
@@ -16,7 +18,7 @@ export default {
 };
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+  @import './src/assets/css/summary-active-cards.scss'
 </style>
 

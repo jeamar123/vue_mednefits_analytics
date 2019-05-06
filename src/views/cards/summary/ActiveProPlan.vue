@@ -1,6 +1,8 @@
 <template>
-  <div class="activeProPlan-container">
-    <h1>Active Pro Plan</h1>
+  <div class="status-proplan-container">
+    <h4 class="status-text">Active</h4>
+    <h3>23</h3>
+    <h5>Pro Plan</h5>
   </div>
 </template>
 
@@ -16,7 +18,7 @@ export default {
 };
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+  @import './src/assets/css/summary-active-cards.scss'
 </style>
 
