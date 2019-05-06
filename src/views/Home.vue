@@ -1,19 +1,12 @@
 <template>
   <div class="home-container-wrapper">
     <div class="home-container">
-      <!-- left box -->
+      <!-- -->
       <div>
         <div class="data-mednefits-box">
           <!-- credit time Period -->
           <CreditTimePeriod></CreditTimePeriod>
         </div>
-        <!-- Growth time period -->
-        <div class="data-mednefits-box">
-          <GrowthTimePeriod></GrowthTimePeriod>
-        </div>
-      </div>
-      <!-- right box -->
-      <div>
         <!-- Active cards -->
         <div class="data-mednefits-box">
         	<div class="status-wrapper">
@@ -30,6 +23,13 @@
 	        		<CreditUsed></CreditUsed>
         		</div>
         	</div>
+        </div>
+      </div>
+      <!--  -->
+      <div>
+        <!-- Growth time period -->
+        <div class="data-mednefits-box">
+          <GrowthTimePeriod></GrowthTimePeriod>
         </div>
         <!-- life Pro plan  -->
         <div class="data-mednefits-box">

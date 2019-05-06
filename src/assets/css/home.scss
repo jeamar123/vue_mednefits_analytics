@@ -1,17 +1,6 @@
 
-.home-container {
+.home-container>div{
 	display: grid;
 	grid-template-columns: 50% 50%;
-
-	>div {
-		.data-mednefits-box:first-child {
-			min-height: 382px;
-		}
-	}
-}
-
-.status-wrapper>div{
-	color: #3c4769;
-	margin-bottom: 10px;
 }
 
