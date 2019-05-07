@@ -1,10 +1,10 @@
 <template>
   <div class="life-pro-plan-container">
     <h4>Life plan growth month and yearly vs one year back date</h4>
-    <div class="account-type-btn-container">
+    <!-- <div class="account-type-btn-container">
       <button class="btn-life-plan active">Life Plan</button>
       <button class="btn-pro-plan">Pro Plan</button>
-    </div>
+    </div> -->
     <canvas id="life-pro-plan-chart"></canvas>
   </div>
 </template>
