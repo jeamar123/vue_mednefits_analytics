@@ -21,7 +21,7 @@
 
     @font-face {
         font-family: 'Helvetica Light'; /* Global font */
-        src: url('./fonts/helveticaneue/HelveticaNeue Light.ttf')  format('truetype');
+        src: url('../fonts/helveticaneue/HelveticaNeue Light.ttf')  format('truetype');
     }
 
     @font-face {

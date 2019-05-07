@@ -4,3 +4,34 @@
 	grid-template-columns: 50% 50%;
 }
 
+.account-type-btn-container {
+	text-align: center;
+	margin-bottom: 10px;
+
+	button {
+		font-family: 'Helvetica Light';
+		font-weight: 700;
+		cursor: pointer;
+		transition: .2s ease-out;
+		outline: none;
+		background: #fff;
+		padding: 10px 17px;
+		font-size: 14px;
+		letter-spacing: .5px;
+		border: 2px solid #ccc;
+
+		&.active {
+			border-color: #009EC8;
+		}
+	}
+	.btn-life-plan {
+		border-radius: 4px 0 0 4px;
+    border-width: 2px 1px 2px 2px;
+	}
+	.btn-pro-plan {
+		margin-left: -5px;
+		border-radius: 0 4px 4px 0;
+    border-width: 2px 2px 2px 1px;
+	}
+}
+
