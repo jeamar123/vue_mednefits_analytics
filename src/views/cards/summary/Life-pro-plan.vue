@@ -4,7 +4,7 @@
     <!-- <div class="account-type-btn-container">
       <button class="btn-life-plan active">Life Plan</button>
       <button class="btn-pro-plan">Pro Plan</button>
-    </div> -->
+    </div>-->
     <canvas id="life-pro-plan-chart"></canvas>
   </div>
 </template>
@@ -19,7 +19,14 @@ export default {
       chartDatas: {
         type: "bar",
         data: {
-          labels: ['1st Month','2nd Month', '3rd Month','4th Month', '5th Month', '6th Month'],
+          labels: [
+            "1st Month",
+            "2nd Month",
+            "3rd Month",
+            "4th Month",
+            "5th Month",
+            "6th Month"
+          ],
           datasets: [
             {
               // one line graph
@@ -43,8 +50,9 @@ export default {
               ],
               borderWidth: 1
             },
-            { // another line graph
-              label: 'Pro Plan',
+            {
+              // another line graph
+              label: "Pro Plan",
               data: [4.8, 12.1, 12.7, 6.7, 139.8, 116.4, 50.7, 49.2],
               backgroundColor: [
                 "rgba(255, 99, 132, 1)",
@@ -54,9 +62,7 @@ export default {
                 "rgba(153, 102, 255, 1)",
                 "rgba(255, 159, 64, 1)"
               ],
-              borderColor: [
-                 "rgba(255, 99, 132, 1)",
-              ],
+              borderColor: ["rgba(255, 99, 132, 1)"],
               borderWidth: 3
             }
           ]
@@ -72,6 +78,10 @@ export default {
                 }
               }
             ]
+          },
+          legend: {
+            display: true,
+            position: "top"
           }
         }
       } // end chart data
