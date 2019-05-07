@@ -1,6 +1,6 @@
 <script>
 import BarGraph from '../views/cards/summary/Bar-graph';
-import ActiveRegistered from '../views/cards/user/Active-registerd';
+import ActiveRegistered from '../views/cards/user/Active-registered';
 
 	var user = {
 		components: {
