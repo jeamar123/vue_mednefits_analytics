@@ -1,10 +1,10 @@
-export const pieChartData = {
-  type: 'pie',
+export const lineChartData = {
+  type: 'line',
   data: {
     labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
     datasets: [
       { // one line graph
-        label: 'Number of Moons',
+        label: 'Active',
         data: [0, 0, 1, 2, 67, 62, 27, 14],
         backgroundColor: [
           'rgba(255, 99, 132, 0.2)',
@@ -24,17 +24,17 @@ export const pieChartData = {
       ],
         borderWidth: 1
       },
-      // { // another line graph
-      //   label: 'Planet Mass (x1,000 km)',
-      //   data: [4.8, 12.1, 12.7, 6.7, 139.8, 116.4, 50.7, 49.2],
-      //   backgroundColor: [
-      //     'rgba(71, 183,132,.5)', // Green
-      //   ],
-      //   borderColor: [
-      //     '#47b784',
-      //   ],
-      //   borderWidth: 3
-      // }
+      { // another line graph
+        label: 'Registered',
+        data: [4.8, 12.1, 12.7, 6.7, 139.8, 116.4, 50.7, 49.2],
+        backgroundColor: [
+          'rgba(71, 183,132,.5)', // Green
+        ],
+        borderColor: [
+          '#47b784',
+        ],
+        borderWidth: 3
+      }
     ]
   },
   options: {
@@ -50,4 +50,4 @@ export const pieChartData = {
   }
 }
 
-export default pieChartData;
+export default lineChartData;
