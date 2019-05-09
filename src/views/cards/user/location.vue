@@ -6,6 +6,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 import Chart from "chart.js";
 import planetChartData from "../../../chart-data/chart-data.js";
 

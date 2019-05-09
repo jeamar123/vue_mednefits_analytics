@@ -7,6 +7,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 import Chart from "chart.js";
 
 export default {

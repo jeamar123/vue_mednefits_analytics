@@ -1,4 +1,5 @@
 <script>
+/* eslint-disable */
 //imports here
 
 // vue js here
@@ -12,10 +13,7 @@
 		},
 		created() {
 
-		},
-		methods: {
-			
-	  }
+		}
 	}
 
 	export default login

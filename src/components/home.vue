@@ -1,4 +1,5 @@
 <script>
+/* eslint-disable */
 import CreditTimePeriod from '../views/cards/summary/CreditTimePeriod';
 import GrowthTimePeriod from '../views/cards/summary/GrowthTimePeriod';
 import LifeProPlan from '../views/cards/summary/Life-pro-plan';

@@ -1,5 +1,5 @@
 <script>
-
+/* eslint-disable */
   var dashboard = {
     components: {
 		},
