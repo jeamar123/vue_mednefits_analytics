@@ -2,7 +2,7 @@
   <div class="active-registerd-graph-container">
     <h4>User Demography base pie and bar graph</h4>
     <canvas id="pie-chart"></canvas>
-    <canvas v-if="false" id="bar-chart"></canvas>
+    <canvas v-show="false" id="bar-chart"></canvas>
   </div>
 </template>
 
