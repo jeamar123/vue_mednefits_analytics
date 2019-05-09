@@ -4,6 +4,7 @@ import Router from 'vue-router'
 // axios.defaults.baseURL = process.env.BASE_URL;
 // axios.defaults.serverUrl = 'http://medicloud.local';
 
+import login from './views/Login.vue'
 import Dashboard from './views/Dashboard.vue'
 import Home from './views/Home.vue'
 import User from './views/User.vue'
@@ -14,15 +15,16 @@ import Finance from './views/Finance.vue'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
+  // mode: 'history',
+  // base: process.env.BASE_URL,
   linkActiveClass: 'active',
   routes: [
     { path: '*', redirect: '/app'},
+    { path: '/app/auth', name: 'AnalyticsAuth', component: login },
     {
       path: '/app',
       name: 'dashboard',
-      redirect: '/app/dashboard',
+      redirect: '/app/auth',
       component: Dashboard,
       // meta: { auth: true },
       children: [

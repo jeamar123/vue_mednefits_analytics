@@ -9,7 +9,7 @@
         </div>
         <!-- Active cards -->
         <div class="data-mednefits-box">
-          <BarGraph></BarGraph>
+          <Demography></Demography>
         </div>
       </div>
       <!--  -->
@@ -19,7 +19,6 @@
         </div>
         <!-- life Pro plan  -->
         <div class="data-mednefits-box">
-          <BarGraph></BarGraph>
         </div>
       </div>
     </div>

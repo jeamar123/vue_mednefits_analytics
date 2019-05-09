@@ -1,11 +1,18 @@
 <script>
 import BarGraph from '../views/cards/summary/Bar-graph';
 import ActiveRegistered from '../views/cards/user/Active-registered';
+import Demography from '../views/cards/user/Demography';
+import Location from '../views/cards/user/Location';
+import Platform from '../views/cards/user/Platform';
+
 
 	var user = {
 		components: {
 			BarGraph,
-			ActiveRegistered
+			ActiveRegistered,
+			Demography,
+			Location,
+			Platform
 		},
 		data() {
 			return {
