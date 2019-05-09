@@ -1,13 +1,16 @@
 .container {
   display: block;
   padding-top: 80px;
+  padding-bottom: 50px;
   background-color: #f5f8fa;
   height: 100vh;
+  overflow-y: auto;
 }
 
 .analytics-login-container {
 	line-height: 1.4;
 	width: 500px;	
+	padding: 20px 40px;
   margin: 0 auto;
 
 	.login-header {
@@ -23,10 +26,6 @@
 	    margin: 10px 0 0;
 	    font-weight: 400;
 		}
-	}
-	form {
-		width: 390px;
-		margin: 0 auto;
 	}
 	.analytics-input-wrapper input {
 		width: 100%;
@@ -77,8 +76,20 @@
 			text-decoration: underline;
 		}
 	}
-
+	
+	.signup-container button,
 	.reset-container button {
 		margin-top: 20px;
+	}
+
+	.first-last-container {
+		display: flex;
+
+		div:nth-child(1) {
+			margin-right: 10px;
+		}
+		div:nth-child(2) {
+			margin-left: 10px;	
+		}
 	}
 }

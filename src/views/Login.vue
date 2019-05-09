@@ -39,8 +39,27 @@
 	  			</div>
 	  		</form>
 	  		<!-- for sign up form -->
-	  		<form>
-	  			
+	  		<form v-if="false" class="signup-container">
+	  			<div class="first-last-container">
+		  			<div class="analytics-input-wrapper">
+		  				<input type="text" placeholder="First name">
+		  			</div>
+		  			<div class="analytics-input-wrapper">
+		  				<input type="text" placeholder="Last name">
+		  			</div>
+	  			</div>
+	  			<div class="analytics-input-wrapper">
+	  				<input type="text" placeholder="Email">
+	  			</div>
+	  			<div class="analytics-input-wrapper">
+	  				<input type="text" placeholder="Password">
+	  			</div>
+	  			<div class="analytics-input-wrapper">
+	  				<input type="text" placeholder="Confrim password">
+	  			</div>
+	  			<div>
+	  				<button>Sign Up</button>
+	  			</div>
 	  		</form>
 	  	</div>
   	</div>
