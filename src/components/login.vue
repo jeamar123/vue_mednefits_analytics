@@ -22,6 +22,5 @@
 </script>
 
 <style lang="scss" scoped>
-// Style here 
-
+	@import './src/assets/css/login.scss';
 </style>
