@@ -1,4 +1,5 @@
 <script>
+/* eslint-disable */
 import BarGraph from '../views/cards/summary/Bar-graph';
 
 	var company = {

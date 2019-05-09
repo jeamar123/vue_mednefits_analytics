@@ -1,4 +1,5 @@
 <script>
+/* eslint-disable */
 import BarGraph from '../views/cards/summary/Bar-graph';
 import ActiveRegistered from '../views/cards/user/Active-registered';
 import Demography from '../views/cards/user/Demography';
@@ -21,10 +22,7 @@ import Platform from '../views/cards/user/Platform';
 		},
 		created() {
 
-		},
-		methods: {
-			
-	  }
+		}
 	}
 
 	export default user
