@@ -22,7 +22,6 @@
           <div class="checkbox-wrapper">
             <label>
               <input type="checkbox">
-
               Stay signed in
             </label>
           </div>

@@ -8,7 +8,8 @@ var login = {
   data() {
     return {
       user_data: {},
-      loginState: "login"
+      loginState: "login",
+      showmodal: false
     };
   },
   created() {},
