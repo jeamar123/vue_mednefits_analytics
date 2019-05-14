@@ -19,6 +19,7 @@
         </div>
         <!-- life Pro plan  -->
         <div class="data-mednefits-box">
+          <Platform></Platform>
         </div>
       </div>
     </div>
