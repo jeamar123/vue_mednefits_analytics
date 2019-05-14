@@ -1,6 +1,12 @@
 <template>
   <div class="active-registerd-graph-container">
-    <h4>User Demography base pie and bar graph</h4>
+    <div class="demography-header">
+      <h4>User Demography base pie and bar graph</h4>
+      <div class="toggle-btn-container">
+        <button class="active">Base Pie</button>
+        <button class="">Bar Graph</button>
+      </div>
+    </div>
     <canvas id="pie-chart"></canvas>
     <canvas v-show="false" id="bar-chart"></canvas>
   </div>
@@ -134,6 +140,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+  @import "./src/assets/css/user.scss";
 </style>
 

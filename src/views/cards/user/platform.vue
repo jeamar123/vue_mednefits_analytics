@@ -16,7 +16,7 @@ export default {
       barchartDatas: {
         type: "bar",
         data: {
-          labels: ["18-25", "26-35", "36-40", "41-50", "51-60", "61-70"],
+          labels: ["M1", "M2", "M3", "M4", "M5", "M6"],
           datasets: [
             {
               // one line graph
