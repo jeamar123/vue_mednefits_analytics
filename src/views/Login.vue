@@ -27,7 +27,10 @@
           </div>
 
           <div>
-            <button>Log in</button>
+            
+            <router-link to="/app/dashboard">
+              <button>Log in</button>
+            </router-link>
           </div>
 
           <div class="reset-login-wrapper">

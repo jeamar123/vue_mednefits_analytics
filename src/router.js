@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import axios from 'axios'
 
-// axios.defaults.baseURL = process.env.BASE_URL;
-// axios.defaults.serverUrl = 'http://medicloud.local';
+axios.defaults.baseURL = process.env.BASE_URL;
+axios.defaults.serverUrl = 'http://localhost:3000/';
 
 import login from './views/Login.vue'
 import Dashboard from './views/Dashboard.vue'
