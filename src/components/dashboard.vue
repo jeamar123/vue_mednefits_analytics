@@ -20,6 +20,6 @@
   export default dashboard
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 	@import './src/assets/css/dashboard.scss'
 </style>

@@ -1,7 +1,8 @@
 
 
 .data-analytics-container {
-	background-color: #f5f8fa;
+	background-color: #ECF0F1;
+	/*background-color: #f5f8fa;*/
 	height: 100vh;
 	display: flex;
 }
@@ -93,5 +94,8 @@
 
 .router-container {
 	height: calc(100vh - 58px);
+	padding-bottom: 50px;
   overflow-y: auto;
 }
+
+

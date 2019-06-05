@@ -11,18 +11,19 @@
         <div class="data-mednefits-box">
         	<div class="status-wrapper">
         		<div class="user-lifeplan-container">
-	        		<ActiveUser></ActiveUser>
-	        		<ActiveLifePlan></ActiveLifePlan>
+	        		<ActiveUser ref="activeUser"></ActiveUser>
+	        		<ActiveLifePlan ref="activeLifePlan"></ActiveLifePlan>
         		</div>
         		<div class="clinic-proplan-container">
-	        		<ActiveClinic></ActiveClinic>
-	        		<ActiveProPlan></ActiveProPlan>
+	        		<ActiveClinic ref="activeClinic"></ActiveClinic>
+	        		<ActiveProPlan ref="activeProPlan"></ActiveProPlan>
         		</div>
         		<div class="allocated-user-container">
-	        		<CreditAllocated></CreditAllocated>
-	        		<CreditUsed></CreditUsed>
+	        		<CreditAllocated ref="creditAllocated"></CreditAllocated>
+	        		<CreditUsed ref="creditUsed"></CreditUsed>
         		</div>
         	</div>
+          <DateFilter ref="dateFilter" @filterChanged="setDateFilter"></DateFilter>
         </div>
       </div>
       <!--  -->

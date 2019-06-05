@@ -131,7 +131,7 @@ export default {
         data: chartData.data,
         options: chartData.options
       });
-    }
+    },
   },
   mounted() {
     this.createChart("pie-chart", this.piechartDatas);

@@ -2,13 +2,19 @@
   <div class="growthTimePeriod-container">
     <h4>Plan growth over time period</h4>
     <canvas id="crowthTimePeriod-chart"></canvas>
+    <DateFilter ref="dateFilter" @filterChanged="setDateFilter"></DateFilter>
   </div>
 </template>
 
 <script>
 import Chart from "chart.js";
+import moment from 'moment';
+import DateFilter from '../../../views/custom-plugin/DateFilter';
 
 export default {
+  components: {
+    DateFilter
+  },
   data() {
     return {
       user_data: {},
@@ -65,7 +71,9 @@ export default {
             ]
           }
         }
-      } // end chart data
+      }, // end chart data
+      start_date : moment(),
+      end_date : moment(),
     };
   },
   created() {},
@@ -77,6 +85,12 @@ export default {
         data: chartData.data,
         options: chartData.options
       });
+    },
+    setDateFilter( dates ){
+      this.start_date = dates.start;
+      this.end_date = dates.end;
+      console.log( this.start_date );
+      console.log( this.end_date );
     }
   },
   mounted() {

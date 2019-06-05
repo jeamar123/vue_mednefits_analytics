@@ -1,5 +1,6 @@
 <script>
 /* eslint-disable */
+import moment from 'moment';
 import CreditTimePeriod from '../views/cards/summary/CreditTimePeriod';
 import GrowthTimePeriod from '../views/cards/summary/GrowthTimePeriod';
 import LifeProPlan from '../views/cards/summary/Life-pro-plan';
@@ -10,6 +11,7 @@ import ActiveProPlan from '../views/cards/summary/ActiveProPlan';
 import CreditUsed from '../views/cards/summary/CreditUsed';
 import CreditAllocated from '../views/cards/summary/CreditAllocated';
 import BarGraph from '../views/cards/summary/Bar-graph';
+import DateFilter from '../views/custom-plugin/DateFilter';
 
 	var home = {
 		components: {
@@ -22,18 +24,27 @@ import BarGraph from '../views/cards/summary/Bar-graph';
 			ActiveLifePlan,
 			ActiveProPlan,
 			CreditUsed,
-			CreditAllocated
+			CreditAllocated,
+			DateFilter
 		},
 		data() {
 			return {
 				user_data : {},
+				start_date : moment(),
+      	end_date : moment(),
 			}
 		},
 		created() {
 
 		},
 		methods: {
-			
+			setDateFilter( dates ){
+	      this.start_date = dates.start;
+	      this.end_date = dates.end;
+	      console.log( this.start_date );
+	      console.log( this.end_date );
+	      this.$refs.activeUser.getActiveUsers( this.start_date, this.end_date );
+	    }
 	  }
 	}
 
