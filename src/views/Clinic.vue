@@ -16,14 +16,7 @@
       <div>
         <!-- Active cards -->
         <div class="data-mednefits-box">
-        	<div class="status-wrapper">
-        		<div class="user-lifeplan-container">
-        		</div>
-        		<div class="clinic-proplan-container">
-        		</div>
-        		<div class="allocated-user-container">
-        		</div>
-        	</div>
+          <BarGraph></BarGraph>
         </div>
         <!-- life Pro plan  -->
         <div class="data-mednefits-box">

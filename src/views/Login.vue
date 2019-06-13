@@ -12,11 +12,11 @@
 
         <form v-if="loginState === 'login'">
           <div class="analytics-input-wrapper">
-            <input type="text" placeholder="Email address">
+            <input type="text" placeholder="Email address" v-model="login_data.email">
           </div>
 
           <div class="analytics-input-wrapper">
-            <input type="text" placeholder="Enter password">
+            <input type="text" placeholder="Enter password" v-model="login_data.password">
           </div>
 
           <div class="checkbox-wrapper">
@@ -28,9 +28,9 @@
 
           <div>
             
-            <router-link to="/app/dashboard">
-              <button>Log in</button>
-            </router-link>
+            <!-- <router-link to="/app/dashboard"> -->
+              <button v-on:click="login( login_data )">Log in</button>
+            <!-- </router-link> -->
           </div>
 
           <div class="reset-login-wrapper">
@@ -84,6 +84,29 @@
           </div>
         </form>
       </div>
+
+      <transition name="fade">    
+        <div v-if="showLoader" class="main-loader">
+          <!-- <div class="loader">
+            <img :src="'../assets/img/mednefits_icon_blue.png'" style=" width: 25px;margin-top: 20px;">
+          </div> -->
+          <div class="circle-loader">
+            <div class="preloader-container">
+              <div class="preloader-wrapper big active">
+                <div class="spinner-layer spinner-blue-only">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div><div class="gap-patch">
+                    <div class="circle"></div>
+                  </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </transition>
     </div>
   </div>
 </template>
