@@ -6,14 +6,13 @@ import Demography from '../views/cards/user/Demography';
 import Location from '../views/cards/user/Location';
 import Platform from '../views/cards/user/Platform';
 
-
 	var user = {
 		components: {
 			BarGraph,
 			ActiveRegistered,
 			Demography,
 			Location,
-			Platform
+			Platform,
 		},
 		data() {
 			return {

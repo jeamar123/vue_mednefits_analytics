@@ -77,6 +77,8 @@ export default {
       end_date : moment().endOf('month'),
       selectedMonth : null,
       dateFilter : 'Last 7 days',
+      filterName : 'Last 7 days',
+      filterValue : null,
       isShowFilterDrop: false,
       isShowMainFilter: true,
       isShowCustomFilter: false,
@@ -88,7 +90,7 @@ export default {
   methods: {
   	pushFilterValues(){
   		// this.$parent.setDateFilter( this.custom_date_filter );
-  		this.$emit('filterChanged', this.custom_date_filter);
+  		this.$emit('filterChanged', { filter : this.custom_date_filter, value : this.filterValue });
   	},
   	showFilter(){
       this.resetFilterViews();
@@ -122,6 +124,11 @@ export default {
       this.hideCustomFilter();
       this.hideFilter();
       this.pushFilterValues();
+      this.filterName = 'Custom';
+      this.filterValue = {
+        start : this.start_date,
+        end : this.end_date,
+      }
     },
     selectFilter( opt ){
       this.isShowMainFilter = false;
@@ -134,6 +141,7 @@ export default {
         this.isShowYearFilter = true;
       }else if( opt == 'Last 7 days' ){ 
         this.dateFilter = opt;
+        this.filterName = opt;
         this.custom_date_filter = {
 	        start : moment().format('YYYY-MM-DD'),
 	        end : moment().subtract( 7, 'days' ).format('YYYY-MM-DD'),
@@ -144,6 +152,8 @@ export default {
     },
     selectMonth( month ){
       var yearNow = moment().format('YYYY');
+      this.filterName = 'by Month';
+      this.filterValue = month + " " + yearNow;
       this.dateFilter = "Month : " + month + " " + yearNow;
       this.hideFilter();
       this.custom_date_filter = {
@@ -157,6 +167,8 @@ export default {
       this.isShowMainFilter = true;
     },
     selectYear( year ){
+      this.filterName = 'by Year';
+      this.filterValue = year;
       this.dateFilter = "Year : " + year;
       this.hideFilter();
       this.custom_date_filter = {

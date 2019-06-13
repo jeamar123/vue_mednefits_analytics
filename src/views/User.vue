@@ -16,6 +16,7 @@
       <div>
         <!-- Growth time period -->
         <div class="data-mednefits-box">
+          <div id="map-area-div"></div>
         </div>
         <!-- life Pro plan  -->
         <div class="data-mednefits-box">

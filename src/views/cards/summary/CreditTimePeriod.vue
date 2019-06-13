@@ -18,6 +18,7 @@ export default {
   data() {
     return {
       user_data: {},
+      chartElement : null,
       chartDatas: {
         type: "bar",
         data: {
@@ -78,6 +79,9 @@ export default {
   },
   created() {},
   methods: {
+    initializeChart(){
+      this.createChart("creditTimePeriod-chart", this.chartDatas);
+    },
     createChart(chartid, chartData) {
       const ctx = document.getElementById(chartid);
       const myChart = new Chart(ctx, {
@@ -85,16 +89,60 @@ export default {
         data: chartData.data,
         options: chartData.options
       });
+      this.chartElement = myChart;
     },
-    setDateFilter( dates ){
-      this.start_date = dates.start;
-      this.end_date = dates.end;
-      console.log( this.start_date );
-      console.log( this.end_date );
-    }
+    updateChart( filter, value ){
+      if( filter == 'Last 7 days' ){
+        var sevenDays = this.generateSevenDays(); 
+        this.chartDatas.data.labels = sevenDays;
+      }else if( filter == 'by Month' ){
+        var weekData = this.generateNumberOfWeeks( value );
+        var temp_arr = [];
+        var i = 1;
+        while( i-1 != weekData.length ){
+          temp_arr.push( 'Week ' + i );
+          i += 1;
+        }
+        this.chartDatas.data.labels = temp_arr;
+      }
+
+      this.chartElement.update();
+    },
+    generateSevenDays(){
+      var temp_arr = [];
+      for( var i = 7; i > 0; i--){
+        temp_arr.push( moment().subtract( i-1, 'days' ).format('MMM DD') );
+      }
+      return temp_arr;
+    },
+    generateNumberOfWeeks( monthYear ){
+      var startMonth = moment( monthYear ).startOf('month');
+      var endMonth = moment( monthYear ).endOf('month');
+      var temp_arr = [];
+      var week_arr = [];
+      var day_ctr = 1;
+      for( var i = 1; i < moment( day_ctr + " " + monthYear ).startOf('month').isoWeekday(); i++ ){
+        week_arr.push(null);
+      }
+      while( day_ctr-1 != moment( endMonth ).format('D') ){
+        week_arr.push( moment( day_ctr + " " + monthYear ).format('MMM DD, YYYY') );
+        if( moment( day_ctr + " " + monthYear ).format('dd') == 'Su' || day_ctr == moment( endMonth ).format('D') ){
+          temp_arr.push( week_arr );
+          week_arr = [];
+        }
+        day_ctr += 1;
+      }
+      return temp_arr;
+    },
+    setDateFilter( filter_data ){
+      var filter = this.$refs.dateFilter.filterName;
+      this.start_date = filter_data.filter.start;
+      this.end_date = filter_data.filter.end;
+      this.updateChart( filter, filter_data.value );
+    },
   },
   mounted() {
-    this.createChart("creditTimePeriod-chart", this.chartDatas);
+    this.initializeChart();
   }
 };
 </script>
