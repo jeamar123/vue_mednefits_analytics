@@ -16,7 +16,7 @@
           </div>
 
           <div class="analytics-input-wrapper">
-            <input type="text" placeholder="Enter password" v-model="login_data.password">
+            <input type="password" placeholder="Enter password" v-model="login_data.password">
           </div>
 
           <div class="checkbox-wrapper">
@@ -29,7 +29,7 @@
           <div>
             
             <!-- <router-link to="/app/dashboard"> -->
-              <button v-on:click="login( login_data )">Log in</button>
+              <button v-on:click="submitLogin( login_data )">Log in</button>
             <!-- </router-link> -->
           </div>
 

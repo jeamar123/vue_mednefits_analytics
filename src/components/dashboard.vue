@@ -5,11 +5,18 @@
 		},
     data() {
       return {
-        sample : {}
+        sample : {},
+        user_token : null,
+        showLoader : false,
       }
     },
     created() {
-      
+      // console.log( localStorage.getItem('vue_session') );
+      if( localStorage.getItem('vue_session') == null ){
+        location.href = '/auth';
+      }else{
+        this.user_token = localStorage.getItem('vue_session');
+      }
     },
     methods: {
       

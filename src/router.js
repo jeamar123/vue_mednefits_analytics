@@ -14,20 +14,21 @@ import Company from './views/Company.vue'
 import Finance from './views/Finance.vue'
 
 Vue.use(Router)
+Vue.use(axios)
 
 export default new Router({
   // mode: 'history',
   // base: process.env.BASE_URL,
   linkActiveClass: 'active',
   routes: [
-    { path: '*', redirect: '/app'},
-    { path: '/app/auth', name: 'AnalyticsAuth', component: login },
+    { path: '*', redirect: '/auth'},
+    { path: '/auth', name: 'AnalyticsAuth', component: login },
     {
       path: '/app',
       name: 'dashboard',
-      redirect: '/app/auth',
+      redirect: '/app/dashboard',
       component: Dashboard,
-      // meta: { auth: true },
+      meta: { auth: true },
       children: [
         { name: 'Home', path: '/app/dashboard', component: Home },
         { name: 'User', path: '/app/user', component: User },

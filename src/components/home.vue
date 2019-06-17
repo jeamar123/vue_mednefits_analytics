@@ -39,11 +39,11 @@ import DateFilter from '../views/custom-plugin/DateFilter';
 		},
 		methods: {
 			setDateFilter( dates ){
-	      this.start_date = dates.start;
-	      this.end_date = dates.end;
-	      console.log( this.start_date );
-	      console.log( this.end_date );
+				console.log( dates );
+	      this.start_date = dates.filter.start;
+	      this.end_date = dates.filter.end;
 	      this.$refs.activeUser.getActiveUsers( this.start_date, this.end_date );
+	      this.$refs.activeClinic.getActiveClinics( this.start_date, this.end_date );
 	    }
 	  }
 	}

@@ -1,5 +1,6 @@
 <script>
 /* eslint-disable */
+import axios from 'axios';
 //imports here
 
 // vue js here
@@ -39,7 +40,7 @@ var login = {
         //methods here
       }
     },
-    login( data ){
+    submitLogin( data ){
       console.log( data );
       if( !data.email ){
         this.$swal( 'Error!', 'Input your email.', 'error');
@@ -49,16 +50,22 @@ var login = {
         this.$swal( 'Error!', 'input your password.', 'error');
         return false;
       }
-      this.$parent.showLoading();
-      axios.get( axios.defaults.serverUrl + "/employee/get_health_partner_lists?type=" + this.eclaim_data.spending_type )
+      this.showLoading();
+      axios.post( axios.defaults.serverUrl + "admin/login", data )
         .then(res => {
-          // console.log( res );
-          this.claimTypesArr = res.data;
-          this.$parent.hideLoading();
+          console.log( res );
+          if( res.data.status ){
+            localStorage.setItem('vue_session', res.data.token);
+            location.href = "#/app";
+          }else{
+            this.$swal( 'Error!', 'Invalid credentials.', 'error');
+          }
+          this.hideLoading();
         })
         .catch(err => {
-          console.log( err );
-          this.$parent.hideLoading();
+          console.log( err.response );
+          this.$swal( 'Error!', err.response.data.message, 'error');
+          this.hideLoading();
         });
     }
   },
