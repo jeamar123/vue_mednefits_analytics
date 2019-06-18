@@ -19,7 +19,6 @@ export default {
     };
   },
   created() {
-    this.getActivePlan( this.start_date, this.end_date );
   },
   methods: {
     getActivePlan( start_date, end_date ){
@@ -30,10 +29,9 @@ export default {
         start : moment( this.start_date ).format('YYYY-MM-DD'),
         end : moment( this.end_date  ).format('YYYY-MM-DD')
       }
-      console.log( data );
-      axios.get( axios.defaults.serverUrl + "analytics/active_plans?plan_type=lite_plan" )
+      axios.get( axios.defaults.serverUrl + "analytics/active_plans?plan_type=lite_plan&start=" + moment( this.start_date ).format('YYYY-MM-DD') + "&end=" + moment( this.end_date ).format('YYYY-MM-DD') )
         .then(res => {
-          console.log( res );
+          // console.log( res );
           this.lite_plan = res.data.data;
         })
         .catch(err => {

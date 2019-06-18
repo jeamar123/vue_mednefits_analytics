@@ -70,11 +70,11 @@ export default {
         data: ['MMMM DD, YYYY']
       },
       custom_date_filter : {
-        start : moment().startOf('month'),
-        end : moment().endOf('month'),
+        start : moment().subtract( 6, 'days' ),
+        end : moment(),
       },
-      start_date : moment().startOf('month'),
-      end_date : moment().endOf('month'),
+      start_date : moment().subtract( 6, 'days' ),
+      end_date : moment(),
       selectedMonth : null,
       dateFilter : 'Last 7 days',
       filterName : 'Last 7 days',
@@ -86,7 +86,9 @@ export default {
       isShowYearFilter: false,
     };
   },
-  created() {},
+  created() {
+    this.pushFilterValues();
+  },
   methods: {
   	pushFilterValues(){
   		// this.$parent.setDateFilter( this.custom_date_filter );
