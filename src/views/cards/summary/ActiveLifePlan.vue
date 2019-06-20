@@ -1,7 +1,24 @@
 <template>
   <div class="status-lifeplan-container">
-    <h4 class="status-text">Active</h4>
-    <h3>{{ lite_plan.plan_count }}</h3>
+    <h4 class="status-text">
+      Active
+      <div v-if="isLoading" class="circle-loader">
+        <div class="preloader-container">
+          <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue-only">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </h4>
+    <h3>{{ lite_plan }}</h3>
     <h5>Lite Plan</h5>
   </div>
 </template>
@@ -13,9 +30,10 @@ import moment from 'moment';
 export default {
   data() {
     return {
-      lite_plan: {},
+      lite_plan: 0,
       start_date : moment(),
       end_date : moment(),
+      isLoading : false,
     };
   },
   created() {
@@ -24,7 +42,7 @@ export default {
     getActivePlan( start_date, end_date ){
       this.start_date = start_date;
       this.end_date = end_date;
-
+      this.isLoading = true;
       var data = {
         start : moment( this.start_date ).format('YYYY-MM-DD'),
         end : moment( this.end_date  ).format('YYYY-MM-DD')
@@ -32,9 +50,11 @@ export default {
       axios.get( axios.defaults.serverUrl + "analytics/active_plans?plan_type=lite_plan&start=" + moment( this.start_date ).format('YYYY-MM-DD') + "&end=" + moment( this.end_date ).format('YYYY-MM-DD') )
         .then(res => {
           // console.log( res );
-          this.lite_plan = res.data.data;
+          this.isLoading = false;
+          this.lite_plan = res.data.data.plan_count;
         })
         .catch(err => {
+          this.isLoading = false;
           console.log( err.response );
         });
     },

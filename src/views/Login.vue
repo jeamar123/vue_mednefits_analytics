@@ -10,7 +10,7 @@
 
         <!-- for login forms -->
 
-        <form v-if="loginState === 'login'">
+        <form v-if="loginState === 'login'" @submit.prevent="submitLogin( login_data )">
           <div class="analytics-input-wrapper">
             <input type="text" placeholder="Email address" v-model="login_data.email">
           </div>
@@ -29,7 +29,7 @@
           <div>
             
             <!-- <router-link to="/app/dashboard"> -->
-              <button v-on:click="submitLogin( login_data )">Log in</button>
+              <button>Log in</button>
             <!-- </router-link> -->
           </div>
 

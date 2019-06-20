@@ -10,18 +10,24 @@
         <!-- Active cards -->
         <div class="data-mednefits-box">
         	<div class="status-wrapper">
-        		<div class="user-lifeplan-container">
+            <div class="status-box">
 	        		<ActiveUser ref="activeUser"></ActiveUser>
+            </div>
+            <div class="status-box">
 	        		<ActiveLifePlan ref="activeLifePlan"></ActiveLifePlan>
-        		</div>
-        		<div class="clinic-proplan-container">
+            </div>
+            <div class="status-box">  
 	        		<ActiveClinic ref="activeClinic"></ActiveClinic>
-	        		<ActiveProPlan ref="activeProPlan"></ActiveProPlan>
-        		</div>
-        		<div class="allocated-user-container">
-	        		<CreditAllocated ref="creditAllocated"></CreditAllocated>
-	        		<CreditUsed ref="creditUsed"></CreditUsed>
-        		</div>
+            </div>
+	        	<div class="status-box">
+            	<ActiveProPlan ref="activeProPlan"></ActiveProPlan>
+            </div>
+	        	<div class="status-box">
+            	<CreditAllocated ref="creditAllocated"></CreditAllocated>
+            </div>
+	        	<div class="status-box">
+            	<CreditUsed ref="creditUsed"></CreditUsed>
+            </div>
         	</div>
           <DateFilter ref="dateFilter" @filterChanged="setDateFilter"></DateFilter>
         </div>

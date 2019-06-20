@@ -145,8 +145,8 @@ export default {
         this.dateFilter = opt;
         this.filterName = opt;
         this.custom_date_filter = {
-	        start : moment().format('YYYY-MM-DD'),
-	        end : moment().subtract( 7, 'days' ).format('YYYY-MM-DD'),
+	        start : moment().subtract( 6, 'days' ).format('YYYY-MM-DD'),
+	        end : moment().format('YYYY-MM-DD'),
 	      }
         this.pushFilterValues();
         this.hideFilter();
